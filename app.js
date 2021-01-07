@@ -8,9 +8,16 @@ app.use(bodyparser.json())
 
 
 
+// Route import
+const eventRoute = require('./routes/event')
+
+app.use('/event', eventRoute)
+
+
+
 // ROUTES
 app.get('/', (req,res) => {
-    res.send("Hello this is movie API")
+    res.send("Hello this is NOI timeline API")
 })
 
 
