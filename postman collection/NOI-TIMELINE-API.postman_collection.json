@@ -41,7 +41,7 @@
 		{
 			"name": "Edit a timeline event",
 			"request": {
-				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"url": "http://localhost:3001/event/5ff81bd88574441b9ca935ab",
 				"method": "PATCH",
 				"header": [
 					{
@@ -61,7 +61,7 @@
 		{
 			"name": "Get a specific timeline event",
 			"request": {
-				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"url": "http://localhost:3001/event/5ff81bd88574441b9ca935ab",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -72,7 +72,7 @@
 		{
 			"name": "Delete a timeline event",
 			"request": {
-				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"url": "http://localhost:3001/event/5ff81bd88574441b9ca935ab",
 				"method": "DELETE",
 				"header": [
 					{
