@@ -9,6 +9,9 @@ const EventSchema = mongoose.Schema({
     },
     discription: {
         type: String
+    },
+    regstatus: {
+        type: String
     }
 })
 

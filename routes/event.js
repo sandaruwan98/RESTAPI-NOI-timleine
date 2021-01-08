@@ -35,7 +35,8 @@ Router.post('/',async (req,res)=>{
     const event = new Event({
         title: req.body.title,
         date: req.body.date,
-        discription: req.body.discription
+        discription: req.body.discription,
+        regstatus: req.body.regstatus
     })
 
     try {
@@ -48,6 +49,40 @@ Router.post('/',async (req,res)=>{
 
 })
 
+
+
+// delete event of given id
+Router.delete('/:eventid',async (req,res)=>{
+    try {
+        const deletedevent = await Event.remove({_id: req.params.eventid})
+        res.json(deletedevent)
+
+    } catch (error) {
+        res.json({err: error})
+    }
+})
+
+
+// update event name of given id
+Router.patch('/:eventid',async (req,res)=>{
+    try {
+        const updatedevent = await Event.updateOne(
+            {_id: req.params.eventid},
+            { $set: 
+                { 
+                    title: req.body.title,
+                    date: req.body.date,
+                    discription: req.body.discription,
+                    regstatus: req.body.regstatus
+                } 
+            }
+        )
+        res.json(updatedevent)
+
+    } catch (error) {
+        res.json({err: error})
+    }
+})
 
 
 
