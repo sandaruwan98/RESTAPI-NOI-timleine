@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NOI-TIMELINE-API",
+		"_postman_id": "77c28fda-9fc3-3ac9-962e-6d9df69e5b2a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a new timeline event",
+			"request": {
+				"url": "http://localhost:3001/event/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"title\": \"NOI 2020 Qualifier Round Registrations\",\n        \"date\": \"TO BE ANNOUNCED\",\n        \"discription\": \"Registrations are open for NOI 2021 Qualifier Round.\",\n         \"regstatus\": \"closed\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all timeline events",
+			"request": {
+				"url": "http://localhost:3001/event",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit a timeline event",
+			"request": {
+				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"title\": \"NOI 2021 contest registration opens\",\n    \"date\": \"18TH DECEMBER, 2020\",\n    \"discription\": \" \",\n    \"regstatus\": \"closed\"\n \t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific timeline event",
+			"request": {
+				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a timeline event",
+			"request": {
+				"url": "http://localhost:3001/event/5ff75d1ab665fd3d2c50a373",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
